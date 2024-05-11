@@ -1,0 +1,377 @@
+@font-face {
+    font-family: roboto;
+    src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 350px;
+    font-family: roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    img {
+        width: 100%;
+    }
+}
+
+body a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background: linear-gradient(to right, #AD29CB, #446DEE);
+    justify-content: center;
+    margin: auto;
+}
+
+.alert {
+    background-color: #ffb193;
+    color: #730000;
+    padding: 10px 20px;
+}
+
+.error {
+    color: red;
+}
+
+.logo-holder {
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo{
+        width: 100%;
+    }
+}
+
+.header-div {
+    flex: auto;
+    margin: auto;
+}
+
+.float-end {
+    float: right;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    a{
+        color: white;
+    }
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    padding: 10px;
+    text-align: center;
+    margin:auto;
+    min-width: 80px;
+}
+
+.main-title {
+    margin: auto;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .searching{
+    display: flex;
+    text-align: right;
+    align-items: center;
+}
+
+.search-field{
+    height: 4vh;
+    width: 400px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    padding-left: 20px;
+}
+
+.login-content{
+    background: linear-gradient(45deg, #050644, #3e0646);
+}
+.login-form{
+    background-color: #cca7f763;
+    padding: 20px;
+    width: 50%;
+    border-radius: 20px;
+    margin-left: 20px
+}
+
+header .active {
+    border-bottom: solid 4px #D8D7FF;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.drop-list{
+    position: absolute;
+    border: solid thin #D9CCE7;
+    background-color: white;
+    margin-top: 10px;
+    a{
+        color: black;
+    }
+}
+
+.hide{
+    display: none;
+}
+.alanwalker{
+    height: 500px;
+    object-fit: cover;
+}
+
+.main-image {
+    height: 500px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 10px 30px;
+}
+
+.music-card-area{
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #411889;
+    padding: 20px;
+    padding-left: 100px;
+}
+
+.music-card {
+    border-radius: 10px;
+    width: 200px;
+    margin: 20px;
+    background-color: #EADEFF;
+    transition: all 0.3s ease;            
+    img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;     
+    }
+}
+
+.music-card:hover{
+    transform: scale(1.2);
+}
+
+
+.music-card img:hover {
+    transform: scale(1.3);
+}
+
+.card-content {
+    padding: 4px;
+}
+
+.card-title {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.card-subtitle {
+    opacity: 0.8;
+    padding-left: 5px;
+}
+
+.bi {
+    margin: 5px 10px;
+}
+
+footer {
+    padding: 20px;
+    background: linear-gradient(to right, #380B3B, #113366);
+    display: flex;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-div {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-div li{
+    padding: 3px;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 50px;
+    height: 40px;   
+    padding-left: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 0px 10px;
+    border-radius: 50px;
+    color: white;
+    background-color: #21137e;
+    cursor: pointer;
+}
+
+.login-holder{
+    background-image: url(../images/AlanWalker.jpg);
+    background-size: cover;
+    margin: auto;
+    height: 70%;
+    width: 100%;
+    padding-top: 7%;
+    h1{
+        color: white;
+        font-size: 30px;
+        margin-left: 17%;
+    }
+    h2{
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    border-radius: 20px;
+}
+
+.login-label{
+    padding-left: 20px;
+    font-weight: bold;
+    color: white;
+}
+.login-btn{
+    padding: 15px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn :hover{
+    background-color: #C7C0F5;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.bg-blue {
+    background: linear-gradient(45deg, #240fb1, #c01eb2);
+    color: white;
+}
+
+.bg-red {
+    background-color: red;
+    color: white;
+}
+
+.bg-purple {
+    background-color: #50118b;
+    color: white;
+}
+
+.bg-pink{
+    background-color: #820c8d;
+    color: white;
+}
+
+.bg-orange {
+    background-color: orange;
+    color: white;
+}
+
+.m-1 {
+    margin: 10px;
+}
+
+.m-2 {
+    margin: 20px;
+}
+
+.mx-1 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mx-2 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.my-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.admin-content {
+    padding: 20px;
+    background-color: #fffbe5;
+}
+
+.section-title {
+    margin-left: 20px; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    width: 500px;
+    margin-right: 10px;
+    padding-top: 15px;
+}
+
+header .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.table th, .table td {
+    border: solid thin #ccc;
+    padding: 5px 10px;
+}
+
+.table th{
+    background-color: #444;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    footer {
+        flex-direction: column;
+    }
+}
