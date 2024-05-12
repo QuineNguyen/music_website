@@ -502,11 +502,11 @@
   		<?php endif;?>
 
 	<div class="mx-2">
-		<a href="<?=ROOT?>/admin/songs?page=<?$prev_page?>">
-			<button class="btn bg-orange" style="margin-bottom: 20px">Trang trước</button>
+		<a href="<?=ROOT?>/admin/songs?page=<?=$prev_page?>">
+			<button class="btn bg-orange" style="margin: 20px">Trang trước</button>
 		</a>
-		<a href="<?=ROOT?>/admin/songs?page=<?$next_page?>">
-			<button class="float-end btn bg-orange" style="margin-bottom: 20px">Trang kế tiếp</button>
+		<a href="<?=ROOT?>/admin/songs?page=<?=$next_page?>">
+			<button class="float-end btn bg-orange" style="margin: 20px">Trang kế tiếp</button>
 		</a>
 	</div>
 
