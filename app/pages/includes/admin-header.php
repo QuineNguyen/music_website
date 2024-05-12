@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Nghe Nhạc</title>
-    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/style.css?5242">
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/style.css?2324">
 </head>
 <body>
     <style>
@@ -17,11 +17,11 @@
     </style>
     <header style="background-color: #3e344e; color: white;">
         <div class="logo-holder">
-            <a href="<?=ROOT?>"><img class="logo" src="<?=ROOT?>/assets/images/logo.jpg"></a>
+            <a href="<?=ROOT?>/admin"><img class="logo" src="<?=ROOT?>/assets/images/MainIcon.png" alt="logo"></a>
         </div>
         <div class="header-div">
             <div class="main-title">
-                Trang Chủ Admin
+                <h2>Trang Chủ Admin</h2>
                 <div class="socials">
                     
                 </div>
@@ -35,8 +35,8 @@
                 <div class="nav-item dropdown">
                     <a href="#">Xin chào, <?=user('username')?></a>
                     <div class="dropdown-list">
-                        <div class="nav-item"><a href="<?=ROOT?>/profile">Về chúng tôi</a></div>
-                        <div class="nav-item"><a href="<?=ROOT?>/logout">Đăng xuất</a></div>
+                        <div class="nav-item"><a href="<?=ROOT?>/profile" style="color: white">Về chúng tôi</a></div>
+                        <div class="nav-item"><a href="<?=ROOT?>/logout" style="color: white">Đăng xuất</a></div>
                     </div>
                 </div>
             </div>

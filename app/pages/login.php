@@ -19,21 +19,24 @@
         message("Sai email hoặc mật khẩu");
     }
 ?>
-<?php require page('includes/login-header')?>;
+<?php require page('includes/header')?>
     
-    <section class="content">
+    <section class="content login-content">     
         <div class="login-holder">
-            <?php if(message()):?>
-                <div class="alert"><?=message('', true)?></div>
-            <?php endif;?>
-            <form method="POST">
-                <center><img src="<?=ROOT?>/assets/images/logo.jpg" style="width: 150px; border-radius: 50%; border: solid thin #ccc"></center>
-                <h2>Đăng nhập admin</h2>
-                <input value="<?=set_value('email')?>" class="my-1 form-control" type="email" name="email" placeholder="Email">
-                <input value="<?=set_value('password')?>" class="my-1 form-control" type="password" name="password" placeholder="Mật khẩu">
-                <button class="my-1 btn bg-blue">Đăng nhập</button>
+            <h1>Âm nhạc dành cho bạn !</h1>
+            <form class="login-form" method="post">
+                <h2>Đăng nhập</h2>
+                <label class="login-label">Email: </label>
+                <br>
+                <input class="my-1 form-control" type="email" name="email" placeholder="example@email.com">
+                <br>
+                <label class="login-label">Mật khẩu: </label>
+                <br>
+                <input class="my-1 form-control" type="password" name="password">
+                <br>
+                <button class="my-1 btn bg-blue login-btn">Đăng nhập</button>
             </form>
         </div>
     </section>
 
-<?php require page('includes/login-footer')?>;
+<?php require page('includes/footer')?>

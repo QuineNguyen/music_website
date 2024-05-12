@@ -73,6 +73,13 @@ header {
     min-width: 80px;
 }
 
+.nav-item2 {
+    padding: 10px;
+    text-align: center;
+    margin:auto;
+    min-width: 80px;
+}
+
 .main-title {
     margin: auto;
     align-items: center;
@@ -104,9 +111,9 @@ header .searching{
 .login-form{
     background-color: #cca7f763;
     padding: 20px;
-    width: 50%;
+    width: 40%;
     border-radius: 20px;
-    margin-left: 20px
+    margin-left: 100px
 }
 
 header .active {
@@ -117,7 +124,7 @@ header .active {
     position: relative;
 }
 
-.drop-list{
+.dropdown-list{
     position: absolute;
     border: solid thin #D9CCE7;
     background-color: white;
@@ -150,13 +157,13 @@ header .active {
     overflow-x: scroll;
     scrollbar-width: thin;
     scrollbar-color: #411889;
-    padding: 20px;
-    padding-left: 100px;
+    padding: 20px 20px 20px 0;
 }
 
 .music-card {
     border-radius: 10px;
     width: 200px;
+    height: auto;
     margin: 20px;
     background-color: #EADEFF;
     transition: all 0.3s ease;            
@@ -164,7 +171,8 @@ header .active {
         width: 200px;
         height: 200px;
         object-fit: cover;
-        border-radius: 10px;     
+        border-radius: 10px;
+        margin: 0 auto;    
     }
 }
 
@@ -193,6 +201,7 @@ header .active {
 
 .bi {
     margin: 5px 10px;
+    width: 30px;
 }
 
 footer {
@@ -220,7 +229,22 @@ footer a {
     border-radius: 50px;
     height: 40px;   
     padding-left: 10px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
 }
+
+.file-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.file-input {
+    width: 100%;
+}
+
+
 
 .btn {
     border: none;
@@ -229,7 +253,9 @@ footer a {
     color: white;
     background-color: #21137e;
     cursor: pointer;
+    height: 30px;
 }
+
 
 .login-holder{
     background-image: url(../images/AlanWalker.jpg);
@@ -238,10 +264,11 @@ footer a {
     height: 70%;
     width: 100%;
     padding-top: 7%;
+    padding-bottom: 7%;
     h1{
         color: white;
         font-size: 30px;
-        margin-left: 17%;
+        margin-left: 15%;
     }
     h2{
         text-align: center;
@@ -271,6 +298,11 @@ footer a {
 .bg-blue {
     background: linear-gradient(45deg, #240fb1, #c01eb2);
     color: white;
+    width: 200px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .bg-red {
@@ -337,6 +369,7 @@ footer a {
     width: 500px;
     margin-right: 10px;
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 header .socials {
@@ -346,9 +379,6 @@ header .socials {
     text-align: right;
 }
 
-.hide {
-    display: none;
-}
 
 .table {
     width: 100%;
@@ -359,10 +389,11 @@ header .socials {
 .table th, .table td {
     border: solid thin #ccc;
     padding: 5px 10px;
+    text-align: center;
 }
 
 .table th{
-    background-color: #444;
+    background: linear-gradient(to right, #380B3B, #113366);;
     color: white;
 }
 

@@ -189,7 +189,9 @@
 	  				<?php endif;?>
  
  					<label>Ảnh đính kèm:</label>
-	  				<input class="form-control my-1" type="file" name="image">
+					<div class="form-control my-1">
+						<input type="file" name="image" style="margin-left: 10px">
+					</div>
 
 	  				<label>Giới thiệu về nghệ sĩ:</label>
 	  				<textarea rows="10" class="form-control my-1" name="bio"><?=set_value('bio')?></textarea>
@@ -218,13 +220,16 @@
 	  					<small class="error"><?=$errors['name']?></small>
 	  				<?php endif;?>
 
-	  				<img src="<?=ROOT?>/<?=$row['image']?>" style="width:200px;height: 200px;object-fit: cover;">
-
-	  				<div>Ảnh đính kèm:</div>
-	  				<input class="form-control my-1" type="file" name="image">
+	  				<div style="display: flex; justify-content: center">
+						<img src="<?=ROOT?>/<?=$row['image']?>" style="width:200px;height: 200px;object-fit: cover;">
+					</div>
+	  				<div class="my-1">Ảnh đính kèm:</div>
+	  				<div class="form-control my-1">
+						<input type="file" name="image" style="margin-left: 10px">
+					</div>
 
 	  				<label>Giới thiệu về nghệ sĩ:</label>
-	  				<textarea rows="10" class="form-control my-1" name="bio"><?=set_value('bio',$row['bio'])?></textarea>
+	  				<textarea rows="10" class="form-control my-1" name="bio" style="border-radius: 10px"><?=set_value('bio',$row['bio'])?></textarea>
 
 	  				<button class="btn bg-orange">Lưu</button>
 	  				<a href="<?=ROOT?>/admin/artists">

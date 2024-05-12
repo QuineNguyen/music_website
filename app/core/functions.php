@@ -169,6 +169,11 @@ function get_category($id)
     return "Không tên";
 }
 
+function esc($str)
+{
+    return nl2br(htmlspecialchars($str));
+}
+
 function get_artist($id)
 {
     $query = "select name from artists where id = :id limit 1";

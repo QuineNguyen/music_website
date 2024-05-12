@@ -160,7 +160,7 @@
 
 
 				}else{
-					$errors['name'] = "Ảnh không hợp lệ. Những định dạng ảnh được chấp nhận: ". implode(",", $allowed);
+					$errors['image'] = "Ảnh không hợp lệ. Những định dạng ảnh được chấp nhận: ". implode(",", $allowed);
 				}
 
 			}
@@ -316,17 +316,17 @@
                         <small class="error"><?=$errors['artist_id']?></small>
                     <?php endif;?>
 
+					<div class="my-1">Ảnh đính kèm:</div>
 					<div class="form-control my-1">
-						<div>Ảnh đính kèm:</div>
-						<input class="form-control my-1" type="file" name="image">
+						<input type="file" name="image" style="margin-left: 10px">
 						<?php if(!empty($errors['image'])):?>
 							<small class="error"><?=$errors['image']?></small>
 						<?php endif;?>
 					</div>
 
+					<div class="my-1">Audio đính kèm:</div>
 					<div class="form-control my-1">
-						<div>Audio đính kèm:</div>
-						<input class="form-control my-1" type="file" name="file">
+						<input type="file" name="file" style="margin-left: 10px">
 						<?php if(!empty($errors['file'])):?>
 							<small class="error"><?=$errors['file']?></small>
 						<?php endif;?>
@@ -384,19 +384,20 @@
                         <small class="error"><?=$errors['artist_id']?></small>
                     <?php endif;?>
 
-					<div class="form-control my-1">
-						<div>Ảnh đính kèm:</div>
+					<div style="display: flex; justify-content: center">
 						<img src="<?=ROOT?>/<?=$row['image']?>" style="width:200px;height: 200px;object-fit: cover;">
-						<input class="form-control my-1" type="file" name="image">
+					</div>
+					<div class="my-1">Ảnh đính kèm:</div>
+					<div class="form-control my-1">
+						<input type="file" name="image" style="margin-left: 10px">
 						<?php if(!empty($errors['image'])):?>
 							<small class="error"><?=$errors['image']?></small>
 						<?php endif;?>
 					</div>
 
+					<div class="my-1">Audio đính kèm:</div>
 					<div class="form-control my-1">
-						<div>Audio đính kèm:</div>
-						<div class=""><?=$row['file']?></div>
-						<input class="form-control my-1" type="file" name="file">
+						<input type="file" name="file" style="margin-left: 10px">
 						<?php if(!empty($errors['file'])):?>
 							<small class="error"><?=$errors['file']?></small>
 						<?php endif;?>
@@ -448,7 +449,9 @@
   		<?php else:?>
 
   			<?php 
-  				$query = "select * from songs order by id desc limit 20";
+				$limit = 5;
+				$offset = ($page - 1) * $limit;
+  				$query = "select * from songs order by id desc limit $limit offset $offset";
   				$rows = db_query($query);
 
   			?>
@@ -497,6 +500,15 @@
 
   			</table>
   		<?php endif;?>
+
+	<div class="mx-2">
+		<a href="<?=ROOT?>/admin/songs?page=<?$prev_page?>">
+			<button class="btn bg-orange" style="margin-bottom: 20px">Trang trước</button>
+		</a>
+		<a href="<?=ROOT?>/admin/songs?page=<?$next_page?>">
+			<button class="float-end btn bg-orange" style="margin-bottom: 20px">Trang kế tiếp</button>
+		</a>
+	</div>
 
 	</section>
 
