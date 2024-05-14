@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=ucfirst($URL[0])?> - Music Website</title>
-    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/style.css?1234">
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/style.css?123">
 </head>
 <body>
     <header>
@@ -15,7 +15,7 @@
             <div class="main-title">
                 MARBLE MUSIC
                 <div class="searching">
-                    <form class="search-bar" action="<?=ROOT?>/search">
+                    <form class="search-bar" action="<?=ROOT?>/search" style="display: flex; align-items: center;">
                         <div class="form-group">
                             <input class="search-field" type="text" placeholder="Tìm kiếm tên bài hát..." name="find">
                             <button class="btn">Tìm kiếm</button>             
@@ -42,10 +42,8 @@
                 </div>
             </div>
             <div class="nav-item"><a href="<?=ROOT?>/artists">Nghệ sĩ</a></div>
-            <div class="nav-item"><a href="<?=ROOT?>/about">Về chúng tôi</a></div>
-            <div class="nav-item"><a href="<?=ROOT?>/contact">Liên hệ</a></div>
             <div class="nav-item dropdown">
-                <a href="#">Xin chào, User</a>
+                <a href="#">Xin chào, <?=user('username')?></a>
                 <div class="dropdown-list hide">
                     <!-- <div class="nav-item""><a href="<?=ROOT?>/admin/users/edit/<?=user('id')?>">Thông tin</a></div> -->
                     <div class="nav-item"><a href="<?=ROOT?>/logout">Đăng xuất</a></div>

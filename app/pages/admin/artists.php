@@ -277,7 +277,9 @@
   		<?php else:?>
 
   			<?php 
-  				$query = "select * from artists order by id desc limit 20";
+				$limit = 5;
+				$offset = ($page - 1) * $limit;
+  				$query = "select * from artists order by id desc limit $limit offset $offset";
   				$rows = db_query($query);
 
   			?>
@@ -318,7 +320,15 @@
 	  				<?php endforeach;?>
   				<?php endif;?>
 
-  			</table>
+				</table>
+				<div class="mx-2">
+					<a href="<?=ROOT?>/admin/songs?page=<?=$prev_page?>">
+						<button class="btn bg-orange" style="margin: 20px">Trang trước</button>
+					</a>
+					<a href="<?=ROOT?>/admin/songs?page=<?=$next_page?>">
+						<button class="float-end btn bg-orange" style="margin: 20px">Trang kế tiếp</button>
+					</a>
+				</div>
   		<?php endif;?>
 
 	</section>

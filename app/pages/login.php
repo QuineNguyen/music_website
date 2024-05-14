@@ -12,14 +12,22 @@
             if(password_verify($_POST['password'], $row['password']))
             {
                 authenticate($row);
-                message("Đăng nhập thành công!!");
-                redirect('admin');
+                if($row['role'] == 'admin')
+                {
+                    message("Đăng nhập thành công");
+                    redirect('admin');
+                }
+                elseif ($row['role'] == 'user')
+                {
+                    message("Đăng nhập thành công");
+                    redirect('');
+                }
             }
         }
         message("Sai email hoặc mật khẩu");
     }
 ?>
-<?php require page('includes/header')?>
+<?php require page('includes/login-header')?>
     
     <section class="content login-content">     
         <div class="login-holder">
@@ -35,8 +43,9 @@
                 <input class="my-1 form-control" type="password" name="password">
                 <br>
                 <button class="my-1 btn bg-blue login-btn">Đăng nhập</button>
+                <a href="<?=ROOT?>/register" style="display: flex; justify-content: center; color: white">
+                    Đăng ký tài khoản
+                </a>
             </form>
         </div>
     </section>
-
-<?php require page('includes/footer')?>

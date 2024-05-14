@@ -29,8 +29,8 @@ header {
 }
 
 .alert {
-    background-color: #ffb193;
-    color: #730000;
+    background-color: #32145e;
+    color: #ffffff;
     padding: 10px 20px;
 }
 
@@ -138,7 +138,7 @@ header .active {
     display: none;
 }
 .alanwalker{
-    height: 500px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -151,13 +151,15 @@ header .active {
     padding: 10px 30px;
 }
 
+.music-card-area-home{
+    display: flex;
+    padding: 0 20px 20px 0;
+}
+
 .music-card-area{
     display: flex;
     justify-content: center;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #411889;
-    padding: 20px 20px 20px 0;
+    padding: 0 20px 20px 0;
 }
 
 .music-card {
@@ -175,7 +177,10 @@ header .active {
         margin: 0 auto;    
     }
 }
-
+.music-card-full {
+    border-radius: 10px;
+    max-width: 500px;
+}
 .music-card:hover{
     transform: scale(1.2);
 }
@@ -205,6 +210,9 @@ header .active {
 }
 
 footer {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
     padding: 20px;
     background: linear-gradient(to right, #380B3B, #113366);
     display: flex;
@@ -321,10 +329,10 @@ footer a {
 }
 
 .bg-orange {
-    background-color: orange;
+    background-color: rgb(143, 25, 182);
     color: white;
 }
-
+ 
 .m-1 {
     margin: 10px;
 }
@@ -355,13 +363,19 @@ footer a {
 
 .admin-content {
     padding: 20px;
-    background-color: #fffbe5;
+    background-color: #f6d2ff;
 }
 
 .section-title {
-    margin-left: 20px; 
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+}
+
+.content-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .form-group {
@@ -384,16 +398,23 @@ header .socials {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
+    border-radius: 7px;
 }
 
 .table th, .table td {
     border: solid thin #ccc;
     padding: 5px 10px;
+    max-width: 200px;
     text-align: center;
+    a{
+        img{
+            border-radius: 7px;
+        }
+    }
 }
 
 .table th{
-    background: linear-gradient(to right, #380B3B, #113366);;
+    background-color: #1b1c61;
     color: white;
 }
 

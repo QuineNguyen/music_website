@@ -14,7 +14,7 @@
 			{
 				$errors['title'] = "Bắt buộc có tên bài hát";
 			}else
-			if(!preg_match("/^[\p{L}\d\s \.\&\-]+$/u", $_POST['title'])){
+			if(!preg_match("/^[\p{L}\d\s() \.\&\-\!]+$/u", $_POST['title'])){
 				$errors['title'] = "Tên bài hát chỉ chứa ký tự & dấu cách";
 			}
 
@@ -119,7 +119,7 @@
 			{
 				$errors['title'] = "Bắt buộc có tên bài hát";
 			}else
-			if(!preg_match("/^[\p{L}\d\s \.\&\-]+$/u", $_POST['title'])){
+			if(!preg_match("/^[\p{L}\d\s() \.\&\-\!]+$/u", $_POST['title'])){
 				$errors['title'] = "Tên bài hát chỉ chứa ký tự & dấu cách";
 			}
 
@@ -277,7 +277,7 @@
   			<div style="max-width: 500px;margin: auto;">
 	  			<form method="post" enctype="multipart/form-data">
 
-	  				<h3>Thêm bài hát</h3>
+	  				<h3 style="text-align: center">Thêm bài hát</h3>
 
 	  				<input name="title" class="form-control my-1" value="<?=set_value('title')?>" type="text" title="title" placeholder="Tên bài hát">
 	  				<?php if(!empty($errors['title'])):?>
@@ -343,7 +343,7 @@
  
   			<div style="max-width: 500px;margin: auto;">
 	  			<form method="post" enctype="multipart/form-data">
-	  				<h3>Cập nhật bài hát</h3>
+	  				<h3 style="text-align: center">Cập nhật bài hát</h3>
 
 	  				<?php if(!empty($row)):?>
 					
@@ -385,7 +385,7 @@
                     <?php endif;?>
 
 					<div style="display: flex; justify-content: center">
-						<img src="<?=ROOT?>/<?=$row['image']?>" style="width:200px;height: 200px;object-fit: cover;">
+						<img src="<?=ROOT?>/<?=$row['image']?>" style="width:200px;height: 200px;object-fit: cover; border-radius: 10px;">
 					</div>
 					<div class="my-1">Ảnh đính kèm:</div>
 					<div class="form-control my-1">
@@ -422,7 +422,7 @@
 
   			<div style="max-width: 500px;margin: auto;">
 	  			<form method="post">
-	  				<h3>Xóa bài hát</h3>
+	  				<h3 style="text-align: center">Xóa bài hát</h3>
 
 	  				<?php if(!empty($row)):?>
 
@@ -478,7 +478,7 @@
 		  				<tr>
 		  					<td><?=$row['id']?></td>
 		  					<td><?=$row['title']?></td>
-		  					<td><img src="<?=ROOT?>/<?=$row['image']?>" style="width:100px;height: 100px;object-fit: cover;"></td>
+		  					<td><img src="<?=ROOT?>/<?=$row['image']?>" style="width:100px;height: 100px;object-fit: cover; border-radius: 7px"></td>
 		  					<td><?=get_category($row['category_id'])?></td>
 		  					<td><?=get_artist($row['artist_id'])?></td>
 							<td>
@@ -499,16 +499,17 @@
   				<?php endif;?>
 
   			</table>
+			<div class="mx-2">
+				<a href="<?=ROOT?>/admin/songs?page=<?=$prev_page?>">
+					<button class="btn bg-orange" style="margin: 20px">Trang trước</button>
+				</a>
+				<a href="<?=ROOT?>/admin/songs?page=<?=$next_page?>">
+					<button class="float-end btn bg-orange" style="margin: 20px">Trang kế tiếp</button>
+				</a>
+			</div>
   		<?php endif;?>
 
-	<div class="mx-2">
-		<a href="<?=ROOT?>/admin/songs?page=<?=$prev_page?>">
-			<button class="btn bg-orange" style="margin: 20px">Trang trước</button>
-		</a>
-		<a href="<?=ROOT?>/admin/songs?page=<?=$next_page?>">
-			<button class="float-end btn bg-orange" style="margin: 20px">Trang kế tiếp</button>
-		</a>
-	</div>
+	
 
 	</section>
 

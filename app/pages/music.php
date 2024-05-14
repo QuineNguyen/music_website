@@ -12,6 +12,8 @@
                 <?php foreach($rows as $row):?>
                     <?php include page('includes/song')?>
                 <?php endforeach; ?>
+            <?php else: ?>
+                <div class="m-2">Không tìm thấy bài hát</div>
             <?php endif; ?>
         </div>
     </section>

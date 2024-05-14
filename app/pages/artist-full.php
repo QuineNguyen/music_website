@@ -1,12 +1,12 @@
 <!-- Music Card -->
-<div class="music-card-full" style="max-width: 800px">
-    <h2 class="card-title"><?=esc($row['name'])?></h2>
-    <div style="overflow: hidden";>
-        <img src="<?=ROOT?>/<?=$row['image']?>"></a>
+<div class="music-card-full" style="width: 400px;">
+    <h2 class="card-title" style="text-align: center"><?=esc($row['name'])?></h2>
+    <div style="overflow: hidden; text-align: center">
+        <img src="<?=ROOT?>/<?=$row['image']?>" style="border-radius: 10px; width: 320px; height: 320px"></a>
     </div>
     <div class="card-content">
         <div><?=esc($row['bio'])?></div>
-        <div>Bài hát của nghệ sĩ:</div>
+        <div class="content-title" style="text-align: center; margin-top: 20px">Bài hát của nghệ sĩ:</div>
         <div style="display: flex; flex-wrap: wrap; justify-content: center">
             <?php
                 $query = "select * from songs where artist_id = :artist_id order by views desc limit 20";

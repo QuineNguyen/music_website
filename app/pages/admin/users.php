@@ -157,7 +157,7 @@
 
             <div style="max-width: 500px; margin: auto;">
                 <form method="POST">
-                    <h3>Thêm tài khoản mới</h3>
+                    <h3 style="text-align: center">Thêm tài khoản mới</h3>
 
                     <input class="form-control my-1" value="<?=set_value('username')?>" type="text" name="username" placeholder="Tên đăng nhập">
                     <?php if(!empty($errors['username'])):?>
@@ -196,7 +196,7 @@
 
             <div style="max-width: 500px; margin: auto;">
                 <form method="POST">
-                    <h3>Cập nhật tài khoản</h3>
+                    <h3 style="text-align: center">Cập nhật tài khoản</h3>
 
                     <?php if(!empty($row)):?>
 
@@ -244,7 +244,7 @@
 
             <div style="max-width: 500px; margin: auto;">
                 <form method="POST">
-                    <h3>Xóa tài khoản</h3>
+                    <h3 style="text-align: center">Xóa tài khoản</h3>
 
                     <?php if(!empty($row)):?>
 

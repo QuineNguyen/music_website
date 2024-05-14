@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Nghe Nhạc</title>
-    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/style.css?2324">
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/style.css?231">
 </head>
 <body>
     <style>
@@ -32,13 +32,7 @@
                 <div class="nav-item"><a href="<?=ROOT?>/admin/songs">Bài hát</a></div>
                 <div class="nav-item"><a href="<?=ROOT?>/admin/categories">Danh mục</a></div>
                 <div class="nav-item"><a href="<?=ROOT?>/admin/artists">Nghệ sĩ</a></div>
-                <div class="nav-item dropdown">
-                    <a href="#">Xin chào, <?=user('username')?></a>
-                    <div class="dropdown-list">
-                        <div class="nav-item"><a href="<?=ROOT?>/profile" style="color: white">Về chúng tôi</a></div>
-                        <div class="nav-item"><a href="<?=ROOT?>/logout" style="color: white">Đăng xuất</a></div>
-                    </div>
-                </div>
+                <div class="nav-item"><a href="<?=ROOT?>/logout">Đăng xuất</a></div>
             </div>
         </div>
     </header>

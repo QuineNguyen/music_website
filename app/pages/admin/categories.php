@@ -10,7 +10,7 @@
             {
                 $errors['category'] = "Bắt buộc có tên danh mục";
             }
-            else if (!preg_match("/^[a-zA-Z \&\-]+$/", $_POST['category']))
+            else if (!preg_match("/^[\p{L}\s]+$/u", $_POST['category']))
             {
                 $errors['category'] = "Tên danh mục chỉ chứa ký tự & dấu cách";
             }
@@ -40,7 +40,7 @@
             {
                 $errors['category'] = "Bắt buộc có tên danh mục";
             }
-            else if (!preg_match("/^[a-zA-Z \&\-]+$/", $_POST['category']))
+            else if (!preg_match("/^[\p{L}\s]+$/u", $_POST['category']))
             {
                 $errors['category'] = "Tên danh mục không chứa dấu cách";
             }
@@ -97,16 +97,6 @@
                         <small class="error"><?=$errors['category']?></small>
                     <?php endif;?>
 
-
-                    <select name="disabled" class="form-control my-1">
-                        <option value="">--Vô hiệu hóa danh mục--</option>
-                        <option <?=set_select('disabled', '1')?> value="1">Có</option>
-                        <option <?=set_select('disabled', '0')?> value="0">Không</option>
-                    </select>
-                    <?php if(!empty($errors['disabled'])):?>
-                        <small class="error"><?=$errors['disabled']?></small>
-                    <?php endif;?>
-
                     <button class="btn bg-orange">Lưu</button>
                     <a href="<?=ROOT?>/admin/categories">
                         <button type="button" class="float-end btn">Quay lại</button>
@@ -127,11 +117,6 @@
                         <small class="error"><?=$errors['category']?></small>
                     <?php endif;?>
 
-                    <select name="disabled" class="form-control my-1">
-                        <option value="">--Vô hiệu hóa danh mục--</option>
-                        <option <?=set_select('disabled', '1', $row['disabled'])?> value="1">Có</option>
-                        <option <?=set_select('disabled', '0', $row['disabled'])?> value="0">Không</option>
-                    </select>
 
                     <button class="btn bg-orange">Lưu</button>
                     <a href="<?=ROOT?>/admin/categories">
@@ -188,7 +173,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Danh mục</th>
-                    <th>Trạng thái</th>
                     <th>Thao tác</th>
                 </tr>
 
@@ -197,7 +181,6 @@
                         <tr>
                             <td><?=$row['id']?></td>
                             <td><?=$row['category']?></td>
-                            <td><?=$row['disabled'] ? 'Không' : 'Có'?></td>
                             <td>
                                 <a href="<?=ROOT?>/admin/categories/edit/<?=$row['id']?>">
                                     <img class="bi" src="<?=ROOT?>/assets/icons/pencil-square.svg" alt="">  
