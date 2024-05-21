@@ -43,9 +43,9 @@
                 <input class="my-1 form-control" type="password" name="password">
                 <br>
                 <button class="my-1 btn bg-blue login-btn">Đăng nhập</button>
-                <a href="<?=ROOT?>/register" style="display: flex; justify-content: center; color: white">
+                <!-- <a href="/register" style="display: flex; justify-content: center; color: white">
                     Đăng ký tài khoản
-                </a>
+                </a> -->
             </form>
         </div>
     </section>

@@ -1,5 +1,5 @@
 <?php require page('includes/header')?>
-    <h3 class="section-title">Nghe nhạc</h3>
+    <h3 class="section-title">Danh sách nghệ sĩ</h3>
 
     <section class="content">
         <?php
